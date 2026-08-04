@@ -8,96 +8,141 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { 
       font-family: 'Segoe UI', Arial, sans-serif; 
-      background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); 
+      background: #0d1117; 
       color: #c9d1d9; 
       line-height: 1.6;
     }
-    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-    header { text-align: center; padding: 60px 0; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    
+    header { text-align: center; padding: 80px 0; }
     .avatar { 
-      width: 150px; height: 150px; 
+      width: 180px; height: 180px; 
       border-radius: 50%; 
       border: 4px solid #58a6ff; 
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       object-fit: cover;
     }
-    h1 { color: #58a6ff; font-size: 2.8em; margin-bottom: 10px; }
-    h2 { color: #8b949e; font-size: 1.4em; margin-bottom: 20px; }
-    .tagline { font-size: 1.1em; color: #7ee787; }
+    h1 { color: #58a6ff; font-size: 3em; margin-bottom: 10px; }
+    h2 { color: #8b949e; font-size: 1.5em; margin-bottom: 20px; }
+    .tagline { font-size: 1.2em; color: #7ee787; margin-bottom: 30px; }
     
-    .section { margin: 60px 0; }
-    .section h3 { 
-      color: #58a6ff; 
-      font-size: 1.8em; 
-      margin-bottom: 30px; 
-      text-align: center;
-      border-bottom: 2px solid #30363d;
-      padding-bottom: 10px;
-    }
-    
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { 
-      background: #21262d; 
-      padding: 25px; 
-      border-radius: 12px; 
-      border: 1px solid #30363d;
-      transition: transform 0.2s;
-    }
-    .card:hover { transform: translateY(-5px); border-color: #58a6ff; }
-    .card h4 { color: #58a6ff; margin-bottom: 10px; }
-    
+    .btn-group { margin-top: 20px; }
     .btn { 
       display: inline-block; 
       background: #238636; 
       color: white; 
-      padding: 12px 25px; 
+      padding: 14px 28px; 
       border-radius: 8px; 
       text-decoration: none; 
-      margin: 10px 5px;
+      margin: 10px;
       font-weight: bold;
-      transition: background 0.2s;
+      transition: all 0.2s;
     }
-    .btn:hover { background: #2ea043; }
+    .btn:hover { background: #2ea043; transform: translateY(-2px); }
+    .btn-outline { background: transparent; border: 2px solid #58a6ff; color: #58a6ff; }
+    .btn-outline:hover { background: #58a6ff; color: #0d1117; }
+    
+    .section { margin: 80px 0; }
+    .section h3 { 
+      color: #58a6ff; 
+      font-size: 2em; 
+      margin-bottom: 40px; 
+      text-align: center;
+    }
+    
+    .about { text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1em; }
+    
+    .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .skill { 
+      background: #21262d; 
+      padding: 10px 20px; 
+      border-radius: 20px; 
+      border: 1px solid #30363d;
+      color: #58a6ff;
+      font-weight: 500;
+    }
+    
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .card { 
+      background: #161b22; 
+      padding: 30px; 
+      border-radius: 12px; 
+      border: 1px solid #30363d;
+      transition: all 0.3s;
+    }
+    .card:hover { transform: translateY(-8px); border-color: #58a6ff; }
+    .card h4 { color: #58a6ff; font-size: 1.3em; margin-bottom: 15px; }
+    .card a { color: #7ee787; text-decoration: none; font-weight: bold; }
     
     .socials { text-align: center; }
     .socials a { 
       color: #58a6ff; 
       text-decoration: none; 
-      margin: 0 15px; 
+      margin: 0 20px; 
       font-size: 1.1em;
     }
-    footer { text-align: center; padding: 40px 0; color: #8b949e; }
+    .socials a:hover { color: #7ee787; }
+    
+    footer { text-align: center; padding: 50px 0; color: #8b949e; border-top: 1px solid #30363d; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <!-- REMPLACE PAR TA PHOTO : upload une photo dans le repo et mets le nom ici -->
-         <img src="21038.jpg" alt="Dr Jérémie OMARI" class="avatar">
+      <img src="21038.jpg" alt="Dr Jérémie OMARI" class="avatar">
       <h1>Dr Jérémie OMARI</h1>
       <h2>Médecin & Développeur HealthTech</h2>
       <p class="tagline">🏥 Par jour je soigne. 💻 Par nuit je code.</p>
-      <p>Je construis des solutions pour améliorer les soins de santé en RDC et partout dans le monde.</p>
+      <div class="btn-group">
+        <a href="#projets" class="btn">Voir mes projets</a>
+        <a href="CV.pdf" class="btn btn-outline">Télécharger CV</a>
+      </div>
     </header>
 
     <div class="section">
+      <h3>À propos de moi</h3>
+      <p class="about">
+        Je suis médecin passionné par l'innovation en santé. Mon objectif : utiliser la technologie 
+        pour améliorer l'accès aux soins en RDC et en Afrique. Je développe des applications et des 
+        outils d'IA pour aider les professionnels de santé et les patients.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Compétences</h3>
+      <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">React</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">IA & Machine Learning</span>
+        <span class="skill">Santé Numérique</span>
+        <span class="skill">Firebase</span>
+        <span class="skill">Data Analysis</span>
+        <span class="skill">Médecine</span>
+      </div>
+    </div>
+
+    <div class="section" id="projets">
       <h3>Mes Projets</h3>
       <div class="projects">
         <div class="card">
-          <h4>HealthTrack RDC</h4>
-          <p>App de suivi des patients pour cliniques en RDC. React + Firebase</p>
+          <h4>Nom du Projet 1</h4>
+          <p>Description de ton projet ici. Les technos utilisées et le problème que ça résout.</p>
+          <a href="#">Voir sur GitHub →</a>
         </div>
         <div class="card">
-          <h4>MediAI Assistant</h4>
-          <p>Chatbot médical pour triage et orientation. Python + OpenAI</p>
+          <h4>Nom du Projet 2</h4>
+          <p>Description de ton projet ici. Les technos utilisées et le problème que ça résout.</p>
+          <a href="#">Voir sur GitHub →</a>
         </div>
         <div class="card">
-          <h4>Data Santé</h4>
-          <p>Dashboard d'analyse des données hospitalières. Python + Pandas</p>
+          <h4>Nom du Projet 3</h4>
+          <p>Description de ton projet ici. Les technos utilisées et le problème que ça résout.</p>
+          <a href="#">Voir sur GitHub →</a>
         </div>
       </div>
-      <div style="text-align: center; margin-top: 20px;">
-        <a href="https://github.com/jeromari07-alt" class="btn">Voir tous mes projets GitHub</a>
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="https://github.com/jeromari07-alt" class="btn">Tous mes repos GitHub</a>
       </div>
     </div>
 
@@ -107,11 +152,10 @@
       <a href="https://instagram.com/jeremie_omari">Instagram</a>
       <a href="https://twitter.com/jeremie_omari">Twitter</a>
       <a href="https://www.tiktok.com/@jeremie_omari007">TikTok</a>
-      <a href="https://www.snapchat.com/add/jeremie_omari?share_id=GzHpmHMf6ws&locale=en-GB">Snapchat</a>
     </div>
 
     <footer>
-      <p>© 2026 Dr Jérémie OMARI. Fait avec ❤️ et du code.</p>
+      <p>© 2026 Dr Jérémie OMARI. Construit avec ❤️ à Kampala</p>
     </footer>
   </div>
 </body>
